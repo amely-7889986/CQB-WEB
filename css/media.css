@@ -1,0 +1,177 @@
+@media only screen and (min-width: 200px) and (max-width: 399px) {
+    #menu-box .title{
+        width: 50%;
+        line-height: 26px;
+        float: right;
+        font-size: 12px;
+      }
+       #menu-box .main{
+    width: 100%;
+  }
+  #menu{
+    display: none;
+  }
+  .section1-img .img{
+    width: 80%;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.60);
+    background-size: 96%;
+    height: 35%;
+    margin-top: 30%;
+  }
+  .section2-img .img {
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    margin-left: 0px;
+  }
+  .section3-img .img {
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    margin-left: 0px;
+  }
+  .section4-img .img {
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    margin-left: 0px;
+  }
+  .partner-box,.partner-list{
+    width: 100% !important;
+  }
+  .partner-list li{
+    width: 48%;
+    margin: 10px 0.5%;
+    background-color: #E9E9E9;
+  }
+  .partner-list .pos-r{
+    width: 100%;
+    height: auto;
+  }
+  .partner-list .pos-r img{
+    max-width: 100%;
+  }
+  .partner-list .pos-r  p{
+    padding: 0 3px;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    position: initial;
+    margin-top: -3px;
+    background-color: rgba(35, 27, 26, 0.79);
+    min-height: 120px;
+  }
+  .service-box{
+    width: 100%;
+  }
+  .service-box img{
+    max-width: 100%;
+  }
+  .bottom-nav {
+        width: 100%;
+    }
+    .bottom-nav li{
+        width: 100%;
+    }
+    .bottom-nav li h3{
+        border-bottom: #ddd solid 1px;
+        padding-left: 6px;
+    }
+    .bottom-nav li a{
+        width: auto;
+        display: inline-block;
+        padding: 4px 6px;
+    }
+    #onlineservice{
+        display: none;
+    }
+}
+@media only screen and (min-width: 400px) and (max-width: 720px) { /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+  #menu-box .main{
+    width: 100%;
+  }
+  #menu-box .title{
+    width: 60%;
+    line-height: 26px;
+    float: right;
+  }
+  #menu{
+    display: none;
+  }
+  .section1-img .img{
+    width: 80%;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.60);
+    background-size: 96%;
+    height: 35%;
+  }
+  .section2-img .img {
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    margin-left: 0px;
+  }
+  .section3-img .img {
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    margin-left: 0px;
+  }
+  .section4-img .img {
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    margin-left: 0px;
+  }
+  .partner-box,.partner-list{
+    width: 100% !important;
+  }
+  .partner-list li{
+    width: 48%;
+    margin: 10px 0.5%;
+    background-color: #E9E9E9;
+  }
+  .partner-list .pos-r{
+    width: 100%;
+    height: auto;
+  }
+  .partner-list .pos-r img{
+    max-width: 100%;
+  }
+  .partner-list .pos-r  p{
+    padding: 0 3px;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    position: initial;
+    margin-top: -3px;
+    background-color: rgba(35, 27, 26, 0.79);
+    min-height: 120px;
+  }
+  .service-box{
+    width: 100%;
+  }
+  .service-box img{
+    max-width: 100%;
+  }
+  .bottom-nav {
+        width: 100%;
+    }
+    .bottom-nav li{
+        width: 100%;
+    }
+    .bottom-nav li h3{
+        border-bottom: #ddd solid 1px;
+        padding-left: 6px;
+    }
+    .bottom-nav li a{
+        width: auto;
+        display: inline-block;
+        padding: 4px 6px;
+    }
+    #onlineservice{
+        display: none;
+    }
+
+}

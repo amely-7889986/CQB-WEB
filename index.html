@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>陈情表官网首页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="css/css.css">
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/media.css">
+</head>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery-ui-1.10.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script src="js/jquery.slimscroll.js"></script>
+<script src="js/move.js"></script>
+<script>
+$(document).ready(function() {
+    $('.section1-img .img').animate({
+                    left: '10%'
+                }, 800, 'easeOutExpo');
+
+    $.fn.fullpage({
+        verticalCentered:false,
+        anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+        scrollingSpeed:'700',
+        menu:'#menu',
+        scrollOverflow:true,
+        paddingTop:'70px',
+        navigation:true,
+        navigationTooltips:['设计理念','危情管理','健康管理','生活管理','服务承诺'],
+
+        afterLoad: function(anchorLink, index){
+            if(index == 1){
+                $('.section1-img .img').animate({
+                    left: '10%'
+                }, 800, 'easeOutExpo');
+            }
+            if(index == 2){
+                $('.section2-img .img').animate({
+                    top: '0'
+                }, 800, 'easeOutExpo');
+            }
+            if(index == 3){
+                $('.section3-img .img').animate({
+                    top: '0'
+                }, 800, 'easeOutExpo');
+            }
+            if(index == 4){
+                $('.section4-img .img').fadeIn(1000);
+            }
+        },
+        onLeave: function(index, direction){
+            if(index == '1'){
+                $('.section1-img .img').animate({
+                    left: '-120%'
+                }, 800, 'easeOutExpo');
+            }
+            if(index == '2'){
+                $('.section2-img .img').animate({
+                    top: '120%'
+                }, 800, 'easeOutExpo');
+            }
+            if(index == '3'){
+                 $('.section3-img .img').animate({
+                    top: '120%'
+                }, 800, 'easeOutExpo');
+            }
+            if(index == '4'){
+                $('.section4-img .img').fadeOut(1000);
+            }
+        }
+
+
+    });
+});
+</script>
+
+<body>
+<div id="header" class="header l-float">
+    <div class="main l-float">
+        <div class="logo-box l-left">
+            <a href=""><h2>陈情表</h2></a>
+        </div>
+        <div class="nav l-right">
+            <ul>
+                <li><a class="active" href="">首页</a></li>
+                <li><a href="">关于我们</a></li>
+                <li><a href="">新闻动态</a></li>
+                <li><a href="">售后服务</a></li>
+                <li><a href="">战略合作</a></li>
+                <li><a href="">人才招聘</a></li>
+                <li><a href="">会员中心</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="menu-box">
+    <div class="main l-float">
+        <p class="l-left"><img id="logo" class="logo" src="images/logo.png" alt=""></p>
+        <p class="title l-left">
+        国家创新基金立项项目、南方医科大学科研合作单位</p>
+        <ul id="menu" class="l-right">
+            <li data-menuanchor="page1" class="active"><a href="#page1">设计理念</a></li>
+            <li data-menuanchor="page2"><a href="#page2">危情管理</a></li>
+            <li data-menuanchor="page3"><a href="#page3">健康管理</a></li>
+            <li data-menuanchor="page4"><a href="#page4">生活管理</a></li>
+            <li data-menuanchor="page5"><a href="#page5">服务承诺</a></li>
+            <!-- <li><a href=""><img src="images/icon-shopcar.png" height="30" width="94" alt=""></a></li> -->
+        </ul>
+    </div>
+</div>
+<div class="section section1">
+    <div class="section1-img">
+        <div class="img">
+
+        </div>
+    </div>
+</div>
+<div class="section section2">
+    <div class="section2-img">
+        <div class="img"></div>
+    </div>
+</div>
+<div class="section section3">
+    <div class="section3-img">
+     <div class="img"></div>
+    </div>
+</div>
+<div class="section section4">
+    <div class="section4-img">
+     <div class="img"></div>
+    </div>
+</div>
+<div class="section section5">
+    <div class="w100">
+        <div class="partner-box bg-bai main">
+            <h2>合作伙伴</h2>
+            <div class="partner-list l-float">
+                <ul>
+                    <li>
+                        <div class="pos-r">
+                            <img src="images/partner1.png" alt="">
+                            <p>陈情系列产品正式签约中国电信为重点销售渠道合作伙伴，在中山市24个镇区的营业厅及手机销售点均可购买到陈情系列产品</p>
+                        </div>
+                        <p class="title">渠道战略合作伙伴</p>
+                    </li>
+                    <li>
+                        <div class="pos-r">
+                            <img src="images/partner2.png" alt="">
+                            <p>南方医科大学黄仕营博士领衔的医学科研团队，为陈情系列产品提供各种健康数据算法，全面优化了产品的健康数学模型，使产品的健康监测数据全面领先于同行业产品。</p>
+                        </div>
+                        <p class="title">科研战略合作伙伴</p>
+                    </li>
+                    <li>
+                        <div class="pos-r">
+                            <img src="images/partner3.png" alt="">
+                            <p>陈情系列项目获得国家科技部专家认可，并与2014年立项为国家创新基金扶持项目，经过两年多的深入研发和测试，陈情系列产品获得一致认可</p>
+                        </div>
+                        <p class="title">科技立项扶持项目</p>
+                    </li>
+                    <li>
+                        <div class="pos-r">
+                            <img src="images/partner4.png" alt="">
+                            <p>陈情系列产品正式签约广州友好老年公寓，作为国内最大私立养老院之一的广州友好老年公寓，将采纳陈情系列产品作为智慧养老解决方案，整体解决老人年全天候看护管理。</p>
+                        </div>
+                        <p class="title">重点实施单位</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="service-box bg-bai main">
+            <img src="images/service.png" width="1200" alt="">
+        </div>
+        <div class="bottom-nav l-float main">
+            <ul>
+                <li>
+                    <h3>首页</h3>
+                    <a href="">设计理念</a>
+                    <a href="">危情管理</a>
+                    <a href="">健康管理</a>
+                    <a href="">生活管理</a>
+                    <a href="">服务承诺</a>
+                </li>
+                <li>
+                    <h3>关于我们</h3>
+                    <a href="">企业介绍</a>
+                    <a href="">公司图片</a>
+                    <a href="">品牌文化</a>
+                    <a href="">企业优势</a>
+                    <a href="">想营理念</a>
+                    <a href="">行业地位</a>
+                </li>
+                <li>
+                    <h3>新闻动态</h3>
+                    <a href="">行业新闻</a>
+                    <a href="">公司新闻</a>
+                </li>
+                <li>
+                    <h3>售后服务</h3>
+                </li>
+                <li>
+                    <h3>战略合作</h3>
+                    <a href="">项目合作</a>
+                    <a href="">区域合作</a>
+                </li>
+                <li>
+                    <h3>人才招聘</h3>
+                    <a href=""></a>
+                </li>
+                <li>
+                    <h3>会员中心</h3>
+                    <a href="">注册</a>
+                    <a href="">登录</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="w100 copyright" id="copyright">
+        <p>粤 ICP备 14052226 版权所有 广东卓商网络科技有限公司 广州爱陪伴健康云智能科技有限责任公司 ©2015-2016 chenqingbiao.com</p>
+    </div>
+</div>
+
+<div id="onlineservice">
+    <ul>
+        <li><a class="qq" href="http://wpa.qq.com/msgrd?v=3&amp;uin=754626052&amp;site=qq&amp;menu=yes" target="_blank" title="QQ咨询"></a></li>
+    </ul>
+</div>
+</body>
+</html>
