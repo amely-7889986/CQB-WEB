@@ -1,23 +1,45 @@
 @media only screen and (min-width: 200px) and (max-width: 399px) {
-    #menu-box .title{
-        width: 50%;
-        line-height: 26px;
+  #header .main{
+    width: 100%;
+  }
+  #header .nav{
+    display: none;
+  }
+  #menu-box .title{
+        width: 100%;
         float: right;
         font-size: 12px;
       }
-       #menu-box .main{
+  #menu-box .main{
     width: 100%;
   }
   #menu{
     display: none;
   }
+  .section1-img,.section2-img,.section3-img,.section4-img,.section5-img{
+    width: 100%;
+  }
   .section1-img .img{
     width: 80%;
     border-radius: 5px;
-    background-color: rgba(255,255,255,0.60);
+    background-color:rgba(104, 178, 218, 0.8);
     background-size: 96%;
     height: 35%;
     margin-top: 30%;
+    z-index: 999;
+  }
+  .section1-img .img1{
+    width: 50%;
+    background-size: 96%;
+    height: 100%;
+    z-index: 9;
+    right: 50% !important;
+  }
+  .section1-img .img2{
+    width: 50%;
+    background-size: 96%;
+    height: 100%;
+    z-index: 9;
   }
   .section2-img .img {
     top: 0px;
@@ -25,17 +47,44 @@
     left: 0px;
     margin-left: 0px;
   }
-  .section3-img .img {
+  .section3-img .img1 {
     top: 0px;
-    width: 100%;
+    width: 50%;
     left: 0px;
-    margin-left: 0px;
+    z-index: 99;
   }
-  .section4-img .img {
+  .section3-img .img2 {
     top: 0px;
-    width: 100%;
+    width: 50%;
+    right: 0px;
+    z-index: 9;
+  }
+  .section4-img .img1 {
+    top: 0px;
+    width: 50%;
     left: 0px;
-    margin-left: 0px;
+    z-index: 99;
+  }
+  .section4-img .img2 {
+    top: 0px;
+    width: 50%;
+    right: 0px;
+    z-index: 9;
+  }
+  .section5-img .img1{
+    background: rgb(255, 255, 255);
+    height: auto;
+    float: none;
+    width: 90%;
+    padding: 20px 1%;
+    margin-bottom: 10px;
+    margin: 0 auto 10px auto;
+  }
+  .section5-img .img1 .details{
+    width: 100%;
+  }
+  .img1 .details .intro{
+    height: auto;
   }
   .partner-box,.partner-list{
     width: 100% !important;
@@ -60,7 +109,7 @@
     position: initial;
     margin-top: -3px;
     background-color: rgba(35, 27, 26, 0.79);
-    min-height: 120px;
+    min-height: 140px;
   }
   .service-box{
     width: 100%;
@@ -92,19 +141,36 @@
     width: 100%;
   }
   #menu-box .title{
-    width: 60%;
-    line-height: 26px;
+    width: 100%;
     float: right;
   }
   #menu{
     display: none;
   }
+  .section1-img,.section2-img,.section3-img,.section4-img,.section5-img{
+    width: 100%;
+  }
   .section1-img .img{
     width: 80%;
     border-radius: 5px;
-    background-color: rgba(255,255,255,0.60);
+    background-color:rgba(104, 178, 218, 0.8);
     background-size: 96%;
     height: 35%;
+    margin-top: 30%;
+    z-index: 999;
+  }
+  .section1-img .img1{
+    width: 50%;
+    background-size: 96%;
+    height: 100%;
+    z-index: 9;
+    right: 50% !important;
+  }
+  .section1-img .img2{
+    width: 50%;
+    background-size: 96%;
+    height: 100%;
+    z-index: 9;
   }
   .section2-img .img {
     top: 0px;
@@ -112,17 +178,38 @@
     left: 0px;
     margin-left: 0px;
   }
-  .section3-img .img {
+  .section3-img .img1 {
     top: 0px;
-    width: 100%;
+    width: 50%;
     left: 0px;
-    margin-left: 0px;
+    z-index: 99;
   }
-  .section4-img .img {
+  .section3-img .img2 {
     top: 0px;
-    width: 100%;
+    width: 50%;
+    right: 0px;
+    z-index: 9;
+  }
+  .section4-img .img1 {
+    top: 0px;
+    width: 50%;
     left: 0px;
-    margin-left: 0px;
+    z-index: 99;
+  }
+  .section4-img .img2 {
+    top: 0px;
+    width: 50%;
+    right: 0px;
+    z-index: 9;
+  }
+  .section5-img .l-float .img{
+    background: rgb(255, 255, 255);
+    height: auto;
+    padding: 20px;
+    float: left;
+    width: 98%;
+    padding: 20px 1%;
+    margin-bottom: 10px;
   }
   .partner-box,.partner-list{
     width: 100% !important;

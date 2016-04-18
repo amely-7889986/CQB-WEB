@@ -13,28 +13,39 @@
 <script src="js/jquery-ui-1.10.3.min.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
 <script src="js/jquery.slimscroll.js"></script>
-<script src="js/move.js"></script>
 <script>
 $(document).ready(function() {
     $('.section1-img .img').animate({
-                    left: '10%'
-                }, 800, 'easeOutExpo');
+        left: '0'
+    }, 800, 'easeOutExpo');
+    $('.section1-img .img1').animate({
+        right: '300px'
+    }, 1500, 'easeOutExpo');
+    $('.section1-img .img2').animate({
+        right: '0'
+    }, 2000, 'easeOutExpo');
 
     $.fn.fullpage({
         verticalCentered:false,
-        anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+        anchors: ['page1', 'page2', 'page3', 'page4', 'page5','page6'],
         scrollingSpeed:'700',
         menu:'#menu',
         scrollOverflow:true,
-        paddingTop:'70px',
+        paddingTop:'120px',
         navigation:true,
-        navigationTooltips:['设计理念','危情管理','健康管理','生活管理','服务承诺'],
+        navigationTooltips:['设计理念','危情管理','健康管理','生活管理','新闻动态','服务承诺'],
 
         afterLoad: function(anchorLink, index){
             if(index == 1){
                 $('.section1-img .img').animate({
-                    left: '10%'
+                    left: '0'
                 }, 800, 'easeOutExpo');
+                $('.section1-img .img1').animate({
+                    right: '300px'
+                }, 1500, 'easeOutExpo');
+                $('.section1-img .img2').animate({
+                    right: '0'
+                }, 2000, 'easeOutExpo');
             }
             if(index == 2){
                 $('.section2-img .img').animate({
@@ -42,18 +53,35 @@ $(document).ready(function() {
                 }, 800, 'easeOutExpo');
             }
             if(index == 3){
-                $('.section3-img .img').animate({
-                    top: '0'
+                $('.section3-img .img1').animate({
+                    left: '0'
+                }, 800, 'easeOutExpo');
+                $('.section3-img .img2').animate({
+                    right: '0'
                 }, 800, 'easeOutExpo');
             }
             if(index == 4){
-                $('.section4-img .img').fadeIn(1000);
+                $('.section4-img .img1').animate({
+                    left: '0'
+                }, 800, 'easeOutExpo');
+                $('.section4-img .img2').animate({
+                    right: '0'
+                }, 800, 'easeOutExpo');
+            }
+            if(index == 5){
+                $('.section5-img .img1').fadeIn(1000);
             }
         },
         onLeave: function(index, direction){
             if(index == '1'){
                 $('.section1-img .img').animate({
                     left: '-120%'
+                }, 800, 'easeOutExpo');
+                $('.section1-img .img1').animate({
+                    right: '-120%'
+                }, 800, 'easeOutExpo');
+                $('.section1-img .img2').animate({
+                    right: '-120%'
                 }, 800, 'easeOutExpo');
             }
             if(index == '2'){
@@ -62,12 +90,23 @@ $(document).ready(function() {
                 }, 800, 'easeOutExpo');
             }
             if(index == '3'){
-                 $('.section3-img .img').animate({
-                    top: '120%'
+                $('.section3-img .img1').animate({
+                    left: '-120%'
+                }, 800, 'easeOutExpo');
+                 $('.section3-img .img2').animate({
+                    right: '-120%'
                 }, 800, 'easeOutExpo');
             }
             if(index == '4'){
-                $('.section4-img .img').fadeOut(1000);
+                $('.section4-img .img1').animate({
+                    left: '-120%'
+                }, 800, 'easeOutExpo');
+                $('.section4-img .img2').animate({
+                    right: '-120%'
+                }, 800, 'easeOutExpo');
+            }
+            if(index == 5){
+                $('.section5-img .img').fadeOut(1000);
             }
         }
 
@@ -80,24 +119,26 @@ $(document).ready(function() {
 <div id="header" class="header l-float">
     <div class="main l-float">
         <div class="logo-box l-left">
-            <a href=""><h2>陈情表</h2></a>
+            <a href=""><h2><img id="logo" class="logo" src="images/logo.png" alt=""></h2></a>
         </div>
         <div class="nav l-right">
             <ul>
                 <li><a class="active" href="">首页</a></li>
-                <li><a href="">关于我们</a></li>
-                <li><a href="">新闻动态</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="news.html">新闻动态</a></li>
                 <li><a href="">售后服务</a></li>
                 <li><a href="">战略合作</a></li>
                 <li><a href="">人才招聘</a></li>
-                <li><a href="">会员中心</a></li>
+                <li><a href="login.html">会员中心</a></li>
             </ul>
+            <div class="zhinan">
+                <a href="">操作指南</a>
+            </div>
         </div>
     </div>
 </div>
 <div id="menu-box">
     <div class="main l-float">
-        <p class="l-left"><img id="logo" class="logo" src="images/logo.png" alt=""></p>
         <p class="title l-left">
         国家创新基金立项项目、南方医科大学科研合作单位</p>
         <ul id="menu" class="l-right">
@@ -105,14 +146,21 @@ $(document).ready(function() {
             <li data-menuanchor="page2"><a href="#page2">危情管理</a></li>
             <li data-menuanchor="page3"><a href="#page3">健康管理</a></li>
             <li data-menuanchor="page4"><a href="#page4">生活管理</a></li>
-            <li data-menuanchor="page5"><a href="#page5">服务承诺</a></li>
-            <!-- <li><a href=""><img src="images/icon-shopcar.png" height="30" width="94" alt=""></a></li> -->
+            <li data-menuanchor="page5"><a href="#page5">新闻动态</a></li>
+            <li data-menuanchor="page6"><a href="#page6">服务承诺</a></li>
+            <li><a href="shopcar.html"><img src="images/icon-shopcar.png" height="30" width="94" alt=""></a></li>
         </ul>
     </div>
 </div>
 <div class="section section1">
     <div class="section1-img">
         <div class="img">
+
+        </div>
+        <div class="img1">
+
+        </div>
+        <div class="img2">
 
         </div>
     </div>
@@ -124,15 +172,55 @@ $(document).ready(function() {
 </div>
 <div class="section section3">
     <div class="section3-img">
-     <div class="img"></div>
+     <div class="img1"></div>
+     <div class="img2"></div>
     </div>
 </div>
 <div class="section section4">
     <div class="section4-img">
-     <div class="img"></div>
+     <div class="img1"></div>
+     <div class="img2"></div>
     </div>
 </div>
 <div class="section section5">
+    <div class="section5-img l-float">
+        <h2 class="title">新闻动态</h2>
+        <div class="l-float">
+            <div class="img1 l-left">
+                <a href=""><h3>广东卓商网络科技有限公司广东卓商网络广东</h3></a>
+                <div class="l-float">
+                    <img class="l-left" src="word/new01.png" height="181" width="163" alt="">
+                    <div class="l-right details">
+                        <p class="intro">可通过系统设定定时心率监测，在自主设置的时间自动开启心率监测功能，监测数据实时传输到监测数据实时传输到监测人手机APP，可在APP查看不同时间段的监测数据监人手机APP，可在APP查看不同时间段的监测数据监测数据……</p>
+                        <p class="time">发布时间：2016-03-31</p>
+                    </div>
+                </div>
+                <p class="btn l-float">
+                    <a class="" href="">发布人：陈定洪</a>
+                    <a class="" href="">查看详情</a>
+                </p>
+            </div>
+            <div class="img1 l-right">
+                <h3>广东卓商网络科技有限公司广东卓商网络广东</h3>
+                <div class="l-float">
+                    <img class="l-left" src="word/new01.png" height="181" width="163" alt="">
+                    <div class="l-right details">
+                        <p class="intro">可通过系统设定定时心率监测，在自主设置的时间自动开启心率监测功能，监测数据实时传输到监测数据实时传输到监测人手机APP，可在APP查看不同时间段的监测数据监人手机APP，可在APP查看不同时间段的监测数据监测数据……</p>
+                        <p class="time">发布时间：2016-03-31</p>
+                    </div>
+                </div>
+                <p class="btn l-float">
+                    <a class="" href="">发布人：陈定洪</a>
+                    <a class="" href="">查看详情</a>
+                </p>
+            </div>
+        </div>
+        <div id="rome" class="">
+            <a href="">查看更多</a>
+        </div>
+    </div>
+</div>
+<div class="section section6">
     <div class="w100">
         <div class="partner-box bg-bai main">
             <h2>合作伙伴</h2>
@@ -173,7 +261,10 @@ $(document).ready(function() {
             <img src="images/service.png" width="1200" alt="">
         </div>
         <div class="bottom-nav l-float main">
-            <ul>
+            <div class="bottom-logo l-left">
+                <a href="index.html"><img src="images/bottom-logo.png" height="134" width="251" alt=""></a>
+            </div>
+            <ul class="l-right">
                 <li>
                     <h3>首页</h3>
                     <a href="">设计理念</a>
@@ -192,21 +283,12 @@ $(document).ready(function() {
                     <a href="">行业地位</a>
                 </li>
                 <li>
-                    <h3>新闻动态</h3>
-                    <a href="">行业新闻</a>
-                    <a href="">公司新闻</a>
-                </li>
-                <li>
                     <h3>售后服务</h3>
                 </li>
                 <li>
                     <h3>战略合作</h3>
                     <a href="">项目合作</a>
                     <a href="">区域合作</a>
-                </li>
-                <li>
-                    <h3>人才招聘</h3>
-                    <a href=""></a>
                 </li>
                 <li>
                     <h3>会员中心</h3>
