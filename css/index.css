@@ -265,6 +265,23 @@
 .service-box{
     margin-bottom: 40px;
 }
+.partner-box input{
+    display: inline-block;
+    position: relative;
+    top: -158px;
+    width: 18px;
+    height: 54px;
+    border: none;
+    outline: none;
+    float: left;
+}
+.prev1{
+    background: #4094c9 url(../images/arrow-prev.png) center center no-repeat;
+}
+.next1{
+    left: 1164px;
+    background: #4094c9 url(../images/arrow-next.png) center center no-repeat;
+}
 
 
 
