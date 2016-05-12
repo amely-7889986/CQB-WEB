@@ -8,11 +8,13 @@
 <link rel="stylesheet" href="css/jquery.fullPage.css">
 <link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/media.css">
+<link rel="stylesheet" href="css/swiper.min.css">
 </head>
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/jquery-ui-1.10.3.min.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
 <script src="js/jquery.slimscroll.js"></script>
+<script src="js/swiper-3.3.1.jquery.min.js"></script>
 <script>
 $(document).ready(function() {
     $('.section1-img .img').animate({
@@ -114,20 +116,16 @@ $(document).ready(function() {
     });
 });
 </script>
-<script src="js/marquee.js" type="text/javascript"></script>
-<script type="text/javascript">
-//合作伙伴图片轮播
-    $(function() {
-        $('#wrap').marquee({
-            auto: false,
-            speed: 1000,
-            showNum: 4,
-            stepLen: 4,
-            prevElement: $('#prev1'),
-            nextElement: $('#next1')
-        });
-    })
-</script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        loop: true,
+        autoplay: 3000,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30
+    });
+    </script>
 
 <body>
 <div id="header" class="header l-float">
@@ -238,37 +236,38 @@ $(document).ready(function() {
     <div class="w100">
         <div class="partner-box bg-bai main">
             <h2>合作伙伴</h2>
-            <div class="partner-list l-float" id="wrap">
+            <div class="swiper-container">
+            <div class="partner-list l-float swiper-wrapper">
                 <ul>
-                    <li>
+                    <li class="swiper-slide">
                         <div class="pos-r">
                             <img src="images/partner1.png" alt="">
                             <p>陈情系列产品正式签约中国电信为重点销售渠道合作伙伴，在中山市24个镇区的营业厅及手机销售点均可购买到陈情系列产品</p>
                         </div>
                         <p class="title">渠道战略合作伙伴</p>
                     </li>
-                    <li>
+                    <li class="swiper-slide">
                         <div class="pos-r">
                             <img src="images/partner2.png" alt="">
                             <p>南方医科大学黄仕营博士领衔的医学科研团队，为陈情系列产品提供各种健康数据算法，全面优化了产品的健康数学模型，使产品的健康监测数据全面领先于同行业产品。</p>
                         </div>
                         <p class="title">科研战略合作伙伴</p>
                     </li>
-                    <li>
+                    <li class="swiper-slide">
                         <div class="pos-r">
                             <img src="images/partner3.png" alt="">
                             <p>陈情系列项目获得国家科技部专家认可，并与2014年立项为国家创新基金扶持项目，经过两年多的深入研发和测试，陈情系列产品获得一致认可</p>
                         </div>
                         <p class="title">科技立项扶持项目</p>
                     </li>
-                    <li>
+                    <li class="swiper-slide">
                         <div class="pos-r">
                             <img src="images/partner4.png" alt="">
                             <p>陈情系列产品正式签约广州友好老年公寓，作为国内最大私立养老院之一的广州友好老年公寓，将采纳陈情系列产品作为智慧养老解决方案，整体解决老人年全天候看护管理。</p>
                         </div>
                         <p class="title">重点实施单位</p>
                     </li>
-                    <li>
+                    <li class="swiper-slide">
                         <div class="pos-r">
                             <img src="images/partner5.png" alt="">
                             <p>陈情系列产品正式签约广州友好老年公寓，作为国内最大私立养老院之一的广州友好老年公寓，将采纳陈情系列产品作为智慧养老解决方案，整体解决老人年全天候看护管理。</p>
@@ -277,8 +276,9 @@ $(document).ready(function() {
                     </li>
                 </ul>
             </div>
-            <input type="button" id="prev1" class="prev1" />
-            <input type="button" id="next1" class="next1" />
+            </div>
+            <input type="button" id="prev1" class="swiper-button-prev" />
+            <input type="button" id="next1" class="swiper-button-next" />
         </div>
         <div class="service-box bg-bai main">
             <img src="images/service.png" width="1200" alt="">
